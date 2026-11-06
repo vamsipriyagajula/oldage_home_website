@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamatha Old Age Home | Gudivada - Dignity, Care & Unconditional Love</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti for Celebration Feedback -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warm: {
+                            50: '#FDFBF7',
+                            100: '#F9F5EC',
+                            200: '#F2E8D5',
+                            300: '#E7D5B6',
+                            400: '#D5B684',
+                            500: '#BA8D4E',
+                        },
+                        terracotta: {
+                            50: '#FCF5F3',
+                            100: '#F9EBE6',
+                            500: '#D95C3C',
+                            600: '#C24727',
+                            700: '#9E341A',
+                        },
+                        saffron: {
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706',
+                        },
+                        peace: {
+                            500: '#1F6B56',
+                            600: '#165242',
+                            700: '#0E3B2F'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 213, 190, 0.4);
+        }
+        .pattern-bg {
+            background-color: #FDFBF7;
+            background-image: radial-gradient(#E8D7B8 0.75px, transparent 0.75px), radial-gradient(#E8D7B8 0.75px, #FDFBF7 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        .telugu-text {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: 0.02em;
+        }
+    </style>
+</head>
+<body class="pattern-bg text-gray-800 antialiased min-h-screen flex flex-col font-sans">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-peace-600 text-white text-xs sm:text-sm py-2 px-4 text-center flex items-center justify-center gap-2">
+        <span class="inline-block animate-pulse w-2 h-2 rounded-full bg-saffron-400"></span>
+        <span>A Registered Non-Profit Community Initiative in <strong>Gudivada, Krishna Dist, AP</strong>. Every small blessing counts!</span>
+        <a href="#sponsor-meal" class="underline font-semibold ml-2 text-saffron-400 hover:text-white">Celebrate With Us &rarr;</a>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-warm-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-terracotta-600 to-saffron-500 flex items-center justify-center text-white shadow-md shadow-terracotta-500/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-hands-holding-child text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-bold font-display text-gray-900 leading-tight">
+                        Mamatha <span class="text-terracotta-600 font-normal">Home</span>
+                    </h1>
+                    <p class="text-xs text-peace-600 font-semibold tracking-wider uppercase">Gudivada &bull; Old Age Care</p>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
+                <a href="#about" class="hover:text-terracotta-600 transition-colors">About</a>
+                <a href="#residents" class="hover:text-terracotta-600 transition-colors">Our Ammas (Residents)</a>
+                <a href="#sponsor-meal" class="hover:text-terracotta-600 transition-colors">Occasion Giving</a>
+                <a href="#items-wishlist" class="hover:text-terracotta-600 transition-colors">Pledge Groceries</a>
+                <a href="#contact" class="hover:text-terracotta-600 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3">
+                <a href="#sponsor-meal" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-terracotta-600 to-saffron-600 hover:from-terracotta-700 hover:to-saffron-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-terracotta-600/25 transition-all hover:shadow-md transform active:scale-95">
+                    <i class="fa-solid fa-heart text-xs text-rose-200"></i>
+                    <span>Sponsor a Meal</span>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-gray-700 hover:bg-warm-100 transition-colors" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-warm-200 px-6 py-4 space-y-3">
+            <a href="#about" class="block py-2 text-gray-700 font-medium hover:text-terracotta-600">About Our Home</a>
+            <a href="#residents" class="block py-2 text-gray-700 font-medium hover:text-terracotta-600">Our Residents & Gallery</a>
+            <a href="#sponsor-meal" class="block py-2 text-terracotta-600 font-semibold">Celebrate an Occasion</a>
+            <a href="#items-wishlist" class="block py-2 text-gray-700 font-medium hover:text-terracotta-600">Donate Essentials / Food</a>
+            <a href="#contact" class="block py-2 text-gray-700 font-medium hover:text-terracotta-600">Contact & Visiting Hours</a>
+            <div class="pt-2">
+                <a href="#sponsor-meal" class="w-full inline-flex justify-center items-center gap-2 bg-terracotta-600 text-white py-2.5 rounded-full font-medium shadow-md">
+                    <i class="fa-solid fa-heart text-xs text-rose-200"></i> Sponsor an Elder's Meal
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden py-16 sm:py-24 bg-gradient-to-b from-warm-100/70 via-warm-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-saffron-100 text-saffron-800 text-xs sm:text-sm font-semibold tracking-wide">
+                            <i class="fa-solid fa-location-dot text-terracotta-600"></i> Gudivada, Andhra Pradesh
+                        </div>
+
+                        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display text-gray-900 leading-tight">
+                            A Home of <span class="text-terracotta-600 underline decoration-saffron-400 decoration-wavy decoration-2">Dignity, Care</span> & Unconditional Love.
+                        </h2>
+
+                        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Welcome to <strong>Mamatha Old Age Home</strong>. We embrace elderly mothers and grandmothers in Gudivada who seek shelter, affection, medical attention, and the warmth of a family in the autumn of their lives.
+                        </p>
+
+                        <!-- Highlights List -->
+                        <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4 text-xs sm:text-sm font-medium text-gray-700">
+                            <span class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-warm-200 shadow-sm">
+                                <i class="fa-solid fa-utensils text-terracotta-600"></i> 100% Nutritious Home Meals
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-warm-200 shadow-sm">
+                                <i class="fa-solid fa-heart-pulse text-rose-500"></i> 24/7 Health Monitoring
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-warm-200 shadow-sm">
+                                <i class="fa-solid fa-hands-praying text-saffron-600"></i> Warm Family Environment
+                            </span>
+                        </div>
+
+                        <!-- Hero CTAs -->
+                        <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#sponsor-meal" class="px-7 py-3.5 rounded-full bg-terracotta-600 hover:bg-terracotta-700 text-white font-semibold text-center shadow-lg shadow-terracotta-600/30 transition-all transform hover:-translate-y-0.5">
+                                <i class="fa-solid fa-cake-candles mr-2"></i> Sponsor on Your Special Day
+                            </a>
+                            <a href="#residents" class="px-7 py-3.5 rounded-full bg-white hover:bg-warm-100 text-gray-800 font-semibold text-center border border-warm-300 shadow-sm transition-colors">
+                                <i class="fa-regular fa-images mr-2 text-peace-600"></i> Meet Our Ammas
+                            </a>
+                        </div>
+
+                        <!-- Local Impact Counter -->
+                        <div class="pt-6 border-t border-warm-200 grid grid-cols-3 gap-4 text-center sm:text-left">
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-bold font-display text-gray-900">32+</div>
+                                <div class="text-xs text-gray-500">Elderly Mothers Housed</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-bold font-display text-gray-900">3,400+</div>
+                                <div class="text-xs text-gray-500">Hot Meals Provided / Mo</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-bold font-display text-peace-600">100%</div>
+                                <div class="text-xs text-gray-500">Community Supported</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Visual Grid -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md">
+                            <!-- Decorative background glow -->
+                            <div class="absolute -top-4 -left-4 w-72 h-72 bg-saffron-300/40 rounded-full blur-3xl -z-10"></div>
+                            <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-terracotta-500/20 rounded-full blur-3xl -z-10"></div>
+
+                            <!-- Hero Card -->
+                            <div class="bg-white p-4 rounded-3xl shadow-2xl border border-warm-200 overflow-hidden">
+                                <div class="relative h-72 rounded-2xl overflow-hidden bg-warm-100">
+                                    <img src="amma4.jpeg" 
+                                         alt="Elderly smiling mother at care home" 
+                                         class="w-full h-full object-cover"
+                                         onerror="this.src='https://placehold.co/600x400/E8D5B6/543015?text=Loving+Ammas+of+Gudivada'">
+                                    
+                                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-white">
+                                        <div class="text-xs font-semibold text-saffron-400 uppercase tracking-widest">Mamatha Sanctuary</div>
+                                        <div class="text-base font-bold">"Their smiles are our biggest blessings."</div>
+                                        <p class="text-xs text-warm-200">Gudivada, Krishna District</p>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 bg-warm-50 rounded-2xl mt-3 flex items-center justify-between border border-warm-200">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-peace-500 text-white flex items-center justify-center font-bold text-lg">
+                                            <i class="fa-solid fa-hands-praying"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs font-bold text-gray-800">Celebrate Any Milestone</div>
+                                            <div class="text-[11px] text-gray-500">Get a personalised digital WhatsApp card</div>
+                                        </div>
+                                    </div>
+                                    <a href="#sponsor-meal" class="text-xs font-bold text-terracotta-600 bg-white px-3 py-1.5 rounded-lg border border-warm-200 hover:bg-warm-100">
+                                        Celebrate &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Mamatha Home Gudivada Section -->
+        <section id="about" class="py-16 bg-white border-y border-warm-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs uppercase tracking-wider text-terracotta-600 font-bold">Who We Are</span>
+                    <h2 class="text-3xl font-extrabold font-display text-gray-900 mt-1">Nurturing Elders with Sacred Respect & Compassion</h2>
+                    <p class="text-gray-600 mt-3 text-sm sm:text-base">
+                        Mamatha Old Age Home was founded with a single mission: to ensure no elder in or around Gudivada spends their twilight years in loneliness, hunger, or abandonment.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="p-6 rounded-2xl bg-warm-50 border border-warm-200/80 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-terracotta-100 text-terracotta-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-house-chimney-heart"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Safe & Peaceful Shelter</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Clean living spaces, daily hygiene assistance, laundry support, and a peaceful garden area for morning walks and satsang.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="p-6 rounded-2xl bg-warm-50 border border-warm-200/80 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-saffron-100 text-saffron-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-bowl-rice"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Sattvic, Wholesome Meals</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Three nutritious Andhra home-cooked meals every single day: freshly prepared idli/upma breakfasts, hearty lunches with dal, vegetables & curd, and light dinners.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="p-6 rounded-2xl bg-warm-50 border border-warm-200/80 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-peace-50 text-peace-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Doctor Visits & Medicines</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Regular health checkups by local Gudivada doctors, timely blood pressure/sugar monitoring, and continuous prescription medication support.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Residents Gallery & Stories Section -->
+        <section id="residents" class="py-16 bg-warm-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                    <div>
+                        <span class="text-xs uppercase tracking-wider text-terracotta-600 font-bold">Our Cherished Family</span>
+                        <h2 class="text-3xl font-extrabold font-display text-gray-900 mt-1">Meet the Ammas & Grandmothers</h2>
+                        <p class="text-gray-600 text-sm mt-1 max-w-xl">
+                            Each resident carries a world of wisdom, gentle stories, and heartfelt smiles. You are always welcome to visit and seek their blessings.
+                        </p>
+                    </div>
+
+                    <!-- Add Resident Photo Trigger (For User's Real Photos) -->
+                    <div class="flex items-center gap-3">
+                        <button onclick="openUploadModal()" class="inline-flex items-center gap-2 px-4 py-2 bg-white text-terracotta-700 hover:bg-terracotta-50 text-xs sm:text-sm font-semibold rounded-xl border border-terracotta-200 shadow-sm transition-all">
+                            <i class="fa-solid fa-cloud-arrow-up text-terracotta-600"></i> Add/Upload Resident Photo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Residents Cards Grid -->
+                <div id="residents-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Cards will be rendered dynamically with default grandma profiles -->
+                </div>
+
+                <!-- Banner Encouraging Visits -->
+                <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-peace-700 to-peace-600 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="space-y-2 text-center md:text-left">
+                        <div class="inline-block px-3 py-1 rounded-full bg-peace-500/50 text-xs font-semibold text-peace-100">Visiting Hours: 10:00 AM - 5:30 PM</div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-display">Come visit and spend an hour with our Ammas</h3>
+                        <p class="text-xs sm:text-sm text-peace-100 max-w-xl">
+                            A conversation, sharing sweet prasadam, or listening to their nostalgic memories from Gudivada brings endless happiness to their hearts.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919876543210?text=Hello%20Mamatha%20Old%20Age%20Home%20Gudivada,%20I%20would%20like%20to%20visit%20the%20elders." target="_blank" class="px-6 py-3 rounded-full bg-white text-peace-700 font-bold text-sm hover:bg-warm-100 transition shadow">
+                        <i class="fa-brands fa-whatsapp text-emerald-600 text-base mr-2"></i> Schedule a Visit
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unique Occasion & Celebration Giving Section -->
+        <section id="sponsor-meal" class="py-16 bg-white border-t border-warm-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="inline-block px-3 py-1 rounded-full bg-terracotta-50 text-terracotta-600 font-bold text-xs uppercase tracking-wider mb-2">
+                        Heartwarming Milestone Celebration
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-gray-900">
+                        Celebrate Your Special Occasion With Our Elders
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base mt-2">
+                        Make your Birthday, Wedding Anniversary, Child's Milestone, or a Remembrance Day truly auspicious by sponsoring meals and receiving grandmotherly blessings.
+                    </p>
+                </div>
+
+                <!-- Interactive Donation & Occasion Form Card -->
+                <div class="max-w-4xl mx-auto glass-card rounded-3xl p-6 sm:p-10 shadow-xl border border-warm-300">
+                    
+                    <form id="occasion-form" onsubmit="handleOccasionSubmit(event)" class="space-y-8">
+                        
+                        <!-- Step 1: Select Your Occasion -->
+                        <div>
+                            <label class="block text-sm font-bold text-gray-900 mb-3">
+                                1. What special occasion are you celebrating?
+                            </label>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3" id="occasion-options">
+                                <label class="cursor-pointer border-2 border-warm-200 rounded-2xl p-3 text-center transition-all hover:border-terracotta-500 has-[:checked]:border-terracotta-600 has-[:checked]:bg-terracotta-50 flex flex-col items-center justify-center">
+                                    <input type="radio" name="occasion" value="Birthday" class="sr-only" checked onchange="updateOccasionUI()">
+                                    <i class="fa-solid fa-cake-candles text-terracotta-600 text-lg mb-1"></i>
+                                    <span class="text-xs font-bold text-gray-800">Birthday</span>
+                                </label>
+
+                                <label class="cursor-pointer border-2 border-warm-200 rounded-2xl p-3 text-center transition-all hover:border-terracotta-500 has-[:checked]:border-terracotta-600 has-[:checked]:bg-terracotta-50 flex flex-col items-center justify-center">
+                                    <input type="radio" name="occasion" value="Wedding Anniversary" class="sr-only" onchange="updateOccasionUI()">
+                                    <i class="fa-solid fa-ring text-terracotta-600 text-lg mb-1"></i>
+                                    <span class="text-xs font-bold text-gray-800">Anniversary</span>
+                                </label>
+
+                                <label class="cursor-pointer border-2 border-warm-200 rounded-2xl p-3 text-center transition-all hover:border-terracotta-500 has-[:checked]:border-terracotta-600 has-[:checked]:bg-terracotta-50 flex flex-col items-center justify-center">
+                                    <input type="radio" name="occasion" value="Graduation / Job Success" class="sr-only" onchange="updateOccasionUI()">
+                                    <i class="fa-solid fa-graduation-cap text-terracotta-600 text-lg mb-1"></i>
+                                    <span class="text-xs font-bold text-gray-800">Graduation</span>
+                                </label>
+
+                                <label class="cursor-pointer border-2 border-warm-200 rounded-2xl p-3 text-center transition-all hover:border-terracotta-500 has-[:checked]:border-terracotta-600 has-[:checked]:bg-terracotta-50 flex flex-col items-center justify-center">
+                                    <input type="radio" name="occasion" value="In Loving Memory" class="sr-only" onchange="updateOccasionUI()">
+                                    <i class="fa-solid fa-feather text-terracotta-600 text-lg mb-1"></i>
+                                    <span class="text-xs font-bold text-gray-800">In Memory</span>
+                                </label>
+
+                                <label class="cursor-pointer border-2 border-warm-200 rounded-2xl p-3 text-center transition-all hover:border-terracotta-500 has-[:checked]:border-terracotta-600 has-[:checked]:bg-terracotta-50 flex flex-col items-center justify-center">
+                                    <input type="radio" name="occasion" value="Festival Blessings" class="sr-only" onchange="updateOccasionUI()">
+                                    <i class="fa-solid fa-sun text-terracotta-600 text-lg mb-1"></i>
+                                    <span class="text-xs font-bold text-gray-800">Festival</span>
+                                </label>
+
+                                <label class="cursor-pointer border-2 border-warm-200 rounded-2xl p-3 text-center transition-all hover:border-terracotta-500 has-[:checked]:border-terracotta-600 has-[:checked]:bg-terracotta-50 flex flex-col items-center justify-center">
+                                    <input type="radio" name="occasion" value="General Goodwill & Prayers" class="sr-only" onchange="updateOccasionUI()">
+                                    <i class="fa-solid fa-hands-praying text-terracotta-600 text-lg mb-1"></i>
+                                    <span class="text-xs font-bold text-gray-800">Goodwill</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Choose Sponsorship Tier -->
+                        <div>
+                            <label class="block text-sm font-bold text-gray-900 mb-3">
+                                2. Choose how you would like to support:
+                            </label>
+                            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" id="tier-options">
+                                
+                                <div class="border-2 border-warm-200 rounded-2xl p-4 cursor-pointer hover:border-terracotta-500 has-[:checked]:border-terracotta-600 has-[:checked]:bg-terracotta-50/60 transition-all flex flex-col justify-between" onclick="selectTier(this, 1500)">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-semibold text-terracotta-600 uppercase">Morning Meal</span>
+                                            <input type="radio" name="tier" value="Breakfast for All Elders" data-amount="1500" class="accent-terracotta-600">
+                                        </div>
+                                        <div class="text-xl font-bold text-gray-900">₹1,500</div>
+                                        <p class="text-xs text-gray-600 mt-1">Hot Idli/Upma with Sambar & Chutney + Morning Tea for all 32+ Ammas.</p>
+                                    </div>
+                                    <div class="mt-3 text-[11px] font-medium text-peace-600 bg-peace-50 p-1.5 rounded-lg text-center">Feeds entire home</div>
+                                </div>
+
+                                <div class="border-2 border-warm-200 rounded-2xl p-4 cursor-pointer hover:border-terracotta-500 has-[:checked]:border-terracotta-600 has-[:checked]:bg-terracotta-50/60 transition-all flex flex-col justify-between" onclick="selectTier(this, 3500)">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-semibold text-terracotta-600 uppercase">Festive Lunch</span>
+                                            <input type="radio" name="tier" value="Grand Festive Lunch with Sweet" data-amount="3500" class="accent-terracotta-600" checked>
+                                        </div>
+                                        <div class="text-xl font-bold text-gray-900">₹3,500</div>
+                                        <p class="text-xs text-gray-600 mt-1">Special Andhra feast with Rice, Sambar, Palya, Payasam / Sweet, Appadam & Curd.</p>
+                                    </div>
+                                    <div class="mt-3 text-[11px] font-medium text-terracotta-600 bg-terracotta-50 p-1.5 rounded-lg text-center font-bold">Most Popular</div>
+                                </div>
+
+                                <div class="border-2 border-warm-200 rounded-2xl p-4 cursor-pointer hover:border-terracotta-500 has-[:checked]:border-terracotta-600 has-[:checked]:bg-terracotta-50/60 transition-all flex flex-col justify-between" onclick="selectTier(this, 5000)">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-semibold text-terracotta-600 uppercase">Full Day Meals</span>
+                                            <input type="radio" name="tier" value="Full Day Meals (Breakfast + Lunch + Dinner)" data-amount="5000" class="accent-terracotta-600">
+                                        </div>
+                                        <div class="text-xl font-bold text-gray-900">₹5,000</div>
+                                        <p class="text-xs text-gray-600 mt-1">Complete daily nutrition care covering all 3 meals and evening snacks with tea.</p>
+                                    </div>
+                                    <div class="mt-3 text-[11px] font-medium text-peace-600 bg-peace-50 p-1.5 rounded-lg text-center">Entire Day Sponsor</div>
+                                </div>
+
+                                <div class="border-2 border-warm-200 rounded-2xl p-4 cursor-pointer hover:border-terracotta-500 has-[:checked]:border-terracotta-600 has-[:checked]:bg-terracotta-50/60 transition-all flex flex-col justify-between" onclick="selectTier(this, 1000, true)">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-semibold text-terracotta-600 uppercase">Medicines / Custom</span>
+                                            <input type="radio" name="tier" value="Custom / Healthcare Care" data-amount="custom" class="accent-terracotta-600">
+                                        </div>
+                                        <div class="text-base font-bold text-gray-900">Custom Amount</div>
+                                        <p class="text-xs text-gray-600 mt-1">Support prescriptions, adult care kits, or enter any warm amount of your choice.</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="relative">
+                                            <span class="absolute inset-y-0 left-0 pl-2.5 flex items-center text-xs text-gray-500 font-bold">₹</span>
+                                            <input type="number" id="custom-amount-input" min="100" placeholder="1000" class="w-full pl-6 pr-2 py-1 text-xs font-bold rounded-lg border border-warm-300 focus:ring-1 focus:ring-terracotta-600 outline-none">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Donor Details -->
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Full Name (or Family Name) *</label>
+                                <input type="text" id="donor-name" required placeholder="e.g. Ramesh Varma & Family" class="w-full px-4 py-2.5 rounded-xl border border-warm-300 focus:ring-2 focus:ring-terracotta-500 text-sm outline-none bg-white">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Celebration Date *</label>
+                                <input type="date" id="donation-date" required class="w-full px-4 py-2.5 rounded-xl border border-warm-300 focus:ring-2 focus:ring-terracotta-500 text-sm outline-none bg-white">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">WhatsApp Mobile Number *</label>
+                                <input type="tel" id="donor-phone" required pattern="[0-9]{10}" placeholder="10-digit number (e.g. 9848022338)" class="w-full px-4 py-2.5 rounded-xl border border-warm-300 focus:ring-2 focus:ring-terracotta-500 text-sm outline-none bg-white">
+                                <span class="text-[11px] text-gray-500">To send you photos of food served in your name.</span>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Short Heartfelt Note or Prayer</label>
+                                <input type="text" id="donor-message" placeholder="e.g. Praying for everyone's happiness and health" class="w-full px-4 py-2.5 rounded-xl border border-warm-300 focus:ring-2 focus:ring-terracotta-500 text-sm outline-none bg-white">
+                            </div>
+                        </div>
+
+                        <!-- Submit CTA -->
+                        <div class="pt-4 border-t border-warm-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div>
+                                <span class="text-xs text-gray-500 block">Total Sponsorship Commitment:</span>
+                                <span id="summary-amount" class="text-2xl font-extrabold text-terracotta-600">₹3,500</span>
+                            </div>
+
+                            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-terracotta-600 to-saffron-600 hover:from-terracotta-700 hover:to-saffron-700 text-white font-bold text-sm shadow-xl shadow-terracotta-600/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-qrcode text-base"></i>
+                                <span>Proceed to Donate & Generate Blessing Card</span>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wishlist: Groceries & Material Donations -->
+        <section id="items-wishlist" class="py-16 bg-warm-100/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-xs uppercase tracking-wider text-peace-600 font-bold">Physical Giving</span>
+                    <h2 class="text-3xl font-extrabold font-display text-gray-900 mt-1">Donate Groceries & Daily Essentials</h2>
+                    <p class="text-gray-600 text-sm mt-1">
+                        Prefer dropping off provisions directly in Gudivada? Here is our ongoing monthly requirement checklist.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-5 rounded-2xl border border-warm-200 shadow-sm flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-wheat-awn text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Sona Masoori Rice (25kg Bags)</h4>
+                            <p class="text-xs text-gray-500 mt-1">Needed: 6 bags per month for daily meals.</p>
+                            <button onclick="pledgeItem('Raw Rice (25kg)')" class="mt-2 text-xs font-semibold text-terracotta-600 hover:underline">I can donate this &rarr;</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-warm-200 shadow-sm flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-bottle-droplet text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Sunflower Oil & Ghee</h4>
+                            <p class="text-xs text-gray-500 mt-1">15 Litres Cooking Oil + 2kg Cow Ghee monthly.</p>
+                            <button onclick="pledgeItem('Cooking Oil & Ghee')" class="mt-2 text-xs font-semibold text-terracotta-600 hover:underline">I can donate this &rarr;</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-warm-200 shadow-sm flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-kit-medical text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Adult Diapers (L/XL)</h4>
+                            <p class="text-xs text-gray-500 mt-1">For bedridden Ammas requiring daily comfort.</p>
+                            <button onclick="pledgeItem('Adult Diapers (L/XL)')" class="mt-2 text-xs font-semibold text-terracotta-600 hover:underline">I can donate this &rarr;</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-warm-200 shadow-sm flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-soap text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Hygiene & Washing Soap</h4>
+                            <p class="text-xs text-gray-500 mt-1">Bathing soaps, Dettol, Detergent & Floor cleaners.</p>
+                            <button onclick="pledgeItem('Hygiene & Cleaning Kit')" class="mt-2 text-xs font-semibold text-terracotta-600 hover:underline">I can donate this &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center text-xs sm:text-sm text-gray-600">
+                    <span>Have other items to give (cot beds, blankets, wheelchair)? </span>
+                    <a href="tel:+919876543210" class="text-terracotta-600 font-bold underline">Call our Gudivada coordinator directly at +91 98765 43210</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gudivada Location & Contact Section -->
+        <section id="contact" class="py-16 bg-white border-t border-warm-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-10">
+                    
+                    <!-- Left: Details -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-terracotta-600 font-bold">Reach Out to Us</span>
+                            <h2 class="text-3xl font-extrabold font-display text-gray-900 mt-1">Mamatha Old Age Home</h2>
+                            <p class="text-gray-600 text-sm mt-2">
+                                Serving elders with love and devotion. Feel free to come over, share festival sweets, or volunteer during weekends.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-warm-100 text-terracotta-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="text-sm">
+                                    <div class="font-bold text-gray-900">Address in Gudivada:</div>
+                                    <div class="text-gray-600">Door No. 4-128, Mamatha Nilayam, Near Sanjeevani Hospital, Gudivada - 521301, Krishna District, Andhra Pradesh.</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-warm-100 text-terracotta-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="text-sm">
+                                    <div class="font-bold text-gray-900">Direct Helpline Numbers:</div>
+                                    <div class="text-gray-600">+91 98480 12345 / +91 98765 43210</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <div class="text-sm">
+                                    <div class="font-bold text-gray-900">WhatsApp Updates & Queries:</div>
+                                    <div class="text-gray-600">+91 98480 12345 (Photos of food serving provided upon request)</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-warm-100 text-terracotta-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div class="text-sm">
+                                    <div class="font-bold text-gray-900">Visitor Timings:</div>
+                                    <div class="text-gray-600">Open 7 days a week: 10:00 AM - 1:00 PM & 4:00 PM - 6:30 PM</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 flex gap-3">
+                            <a href="https://wa.me/919848012345?text=Namaste,%20I%20would%20like%20to%20know%20more%20about%20Mamatha%20Old%20Age%20Home%20in%20Gudivada." target="_blank" class="px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs sm:text-sm flex items-center gap-2 shadow-sm transition">
+                                <i class="fa-brands fa-whatsapp text-base"></i> Chat on WhatsApp
+                            </a>
+                            <a href="tel:+919848012345" class="px-5 py-2.5 rounded-full bg-warm-200 hover:bg-warm-300 text-gray-800 font-medium text-xs sm:text-sm flex items-center gap-2 transition">
+                                <i class="fa-solid fa-phone"></i> Call Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Google Map & Location Visual -->
+                    <div class="lg:col-span-6 flex flex-col justify-between">
+                        <div class="w-full h-80 rounded-3xl overflow-hidden border border-warm-300 shadow-md relative bg-warm-200">
+                            <!-- Visual Embed Map of Gudivada -->
+                            <iframe 
+                                title="Mamatha Old Age Home Gudivada Location"
+                                class="w-full h-full border-0 filter contrast-90"
+                                src="https://maps.google.com/maps?q=Gudivada,+Krishna+District,+Andhra+Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                loading="lazy">
+                            </iframe>
+                            <div class="absolute bottom-3 left-3 right-3 bg-white/90 backdrop-blur-sm p-3 rounded-2xl border border-warm-200 text-xs flex items-center justify-between">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-map-pin text-terracotta-600 mr-1.5"></i> Gudivada Town Center, AP</span>
+                                <a href="https://maps.google.com/?q=Gudivada" target="_blank" class="text-terracotta-600 font-bold hover:underline">Open in Google Maps &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Bank & Tax Exemption Details -->
+                        <div class="mt-4 p-4 rounded-2xl bg-warm-50 border border-warm-200 text-xs text-gray-600 flex items-center justify-between">
+                            <div>
+                                <span class="font-bold text-gray-800">Direct UPI ID:</span> mamatha.gudivada@sbi
+                            </div>
+                            <span class="text-peace-600 font-bold bg-peace-50 px-2.5 py-1 rounded-md border border-peace-200">Non-Profit Trust</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-warm-200 py-12 border-t border-gray-800 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+                <div class="space-y-1">
+                    <div class="text-lg font-bold font-display text-white">Mamatha Old Age Home, Gudivada</div>
+                    <p class="text-gray-400 text-xs">A safe haven where every grandmother finds respect, healthy meals, and sincere prayers.</p>
+                </div>
+                <div class="text-xs text-gray-400">
+                    &copy; <span id="current-year"></span> Mamatha Old Age Home & Community Service Project. Built with love in Gudivada.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- 1. UPI QR Code & Payment Modal -->
+    <div id="payment-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-warm-300 relative animate-in fade-in zoom-in-95 duration-200">
+            <!-- Close Button -->
+            <button onclick="closeModal('payment-modal')" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-warm-100 text-gray-500 hover:text-gray-800 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center">
+                <div class="w-14 h-14 rounded-full bg-terracotta-50 text-terracotta-600 flex items-center justify-center mx-auto text-2xl mb-3 shadow-inner">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <h3 class="text-xl font-bold font-display text-gray-900">Complete Your Sponsorship</h3>
+                <p class="text-xs text-gray-500 mt-1" id="payment-modal-subtitle">
+                    Scan via Google Pay, PhonePe, Paytm, or BHIM UPI
+                </p>
+            </div>
+
+            <!-- Amount Display -->
+            <div class="my-5 p-4 rounded-2xl bg-warm-50 border border-warm-200 text-center">
+                <div class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Amount to Pay</div>
+                <div class="text-3xl font-extrabold text-terracotta-600 mt-1" id="modal-pay-amount">₹3,500</div>
+                <div class="text-xs text-gray-600 mt-1 font-medium" id="modal-pay-tier-name">Grand Festive Lunch with Sweet</div>
+            </div>
+
+            <!-- Realistic Mock UPI QR Code -->
+            <div class="flex flex-col items-center justify-center p-4 bg-white rounded-2xl border-2 border-dashed border-warm-300">
+                <div class="relative p-2 bg-white rounded-xl shadow-sm">
+                    <!-- Dynamic SVG QR Code Representation -->
+                    <svg class="w-44 h-44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <rect width="100" height="100" fill="white"/>
+                        <!-- QR Corner 1 -->
+                        <rect x="5" y="5" width="28" height="28" fill="#1F2937" rx="3"/>
+                        <rect x="9" y="9" width="20" height="20" fill="white" rx="2"/>
+                        <rect x="13" y="13" width="12" height="12" fill="#1F2937" rx="1"/>
+                        <!-- QR Corner 2 -->
+                        <rect x="67" y="5" width="28" height="28" fill="#1F2937" rx="3"/>
+                        <rect x="71" y="9" width="20" height="20" fill="white" rx="2"/>
+                        <rect x="75" y="13" width="12" height="12" fill="#1F2937" rx="1"/>
+                        <!-- QR Corner 3 -->
+                        <rect x="5" y="67" width="28" height="28" fill="#1F2937" rx="3"/>
+                        <rect x="9" y="71" width="20" height="20" fill="white" rx="2"/>
+                        <rect x="13" y="75" width="12" height="12" fill="#1F2937" rx="1"/>
+                        <!-- QR Data Matrix Dots -->
+                        <rect x="38" y="10" width="6" height="6" fill="#1F2937"/>
+                        <rect x="48" y="10" width="6" height="6" fill="#1F2937"/>
+                        <rect x="58" y="10" width="6" height="6" fill="#1F2937"/>
+                        <rect x="38" y="22" width="6" height="6" fill="#1F2937"/>
+                        <rect x="50" y="24" width="6" height="6" fill="#1F2937"/>
+                        <rect x="10" y="40" width="6" height="6" fill="#1F2937"/>
+                        <rect x="20" y="45" width="6" height="6" fill="#1F2937"/>
+                        <rect x="38" y="38" width="24" height="24" rx="4" fill="#D95C3C"/>
+                        <circle cx="50" cy="50" r="7" fill="white"/>
+                        <rect x="70" y="40" width="8" height="8" fill="#1F2937"/>
+                        <rect x="82" y="48" width="8" height="8" fill="#1F2937"/>
+                        <rect x="38" y="70" width="6" height="6" fill="#1F2937"/>
+                        <rect x="48" y="75" width="6" height="6" fill="#1F2937"/>
+                        <rect x="58" y="82" width="6" height="6" fill="#1F2937"/>
+                        <rect x="70" y="70" width="10" height="6" fill="#1F2937"/>
+                        <rect x="82" y="82" width="8" height="8" fill="#1F2937"/>
+                    </svg>
+                </div>
+                <div class="mt-2 text-[11px] text-gray-500 font-mono flex items-center gap-1.5">
+                    <span>UPI ID: <strong>mamatha.gudivada@sbi</strong></span>
+                    <button onclick="copyUpi()" class="text-terracotta-600 hover:underline"><i class="fa-regular fa-copy"></i> Copy</button>
+                </div>
+            </div>
+
+            <!-- Supported UPI icons -->
+            <div class="mt-3 flex items-center justify-center gap-3 text-gray-400 text-xs">
+                <span>Google Pay</span> &bull; 
+                <span>PhonePe</span> &bull; 
+                <span>Paytm</span> &bull; 
+                <span>BHIM</span>
+            </div>
+
+            <!-- Simulation of Payment completion -->
+            <div class="mt-6 space-y-2">
+                <button onclick="simulatePaymentSuccess()" class="w-full py-3 rounded-full bg-peace-600 hover:bg-peace-700 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>I Have Completed the UPI Transfer</span>
+                </button>
+                <button onclick="closeModal('payment-modal')" class="w-full py-2 text-xs text-gray-500 hover:text-gray-700">
+                    Cancel or Change Amount
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Heartfelt WhatsApp Blessing Card Celebration Modal -->
+    <div id="card-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-5 sm:p-7 shadow-2xl border border-warm-300 relative my-6">
+            
+            <button onclick="closeModal('card-modal')" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-warm-100 text-gray-500 hover:text-gray-800 flex items-center justify-center z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center mb-4">
+                <div class="inline-block p-2 rounded-full bg-saffron-100 text-saffron-700 mb-1">
+                    <i class="fa-solid fa-award text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold font-display text-gray-900" id="card-modal-title">Heartfelt Blessings from Mamatha Home!</h3>
+                <p class="text-xs text-gray-600 max-w-md mx-auto mt-0.5">
+                    Your kindness brings genuine tears of happiness and nutritious warmth to the grandmas in Gudivada today.
+                </p>
+            </div>
+
+            <!-- THE SHAREABLE CARD (Designed for WhatsApp status & sharing) -->
+            <div id="shareable-blessing-card" class="relative rounded-2xl overflow-hidden p-6 bg-gradient-to-br from-warm-50 via-warm-100 to-saffron-100 border-2 border-terracotta-500 shadow-xl text-gray-800">
+                <!-- Floral corner motif decoration -->
+                <div class="absolute -top-6 -right-6 w-20 h-20 bg-terracotta-500/10 rounded-full"></div>
+                <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-saffron-500/10 rounded-full"></div>
+
+                <!-- Header of the Card -->
+                <div class="flex items-center justify-between border-b border-warm-300/80 pb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-xl bg-terracotta-600 text-white flex items-center justify-center text-sm font-bold shadow">
+                            <i class="fa-solid fa-hands-holding-child"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-extrabold text-gray-900 font-display">Mamatha Old Age Home</div>
+                            <div class="text-[10px] text-peace-600 font-bold uppercase tracking-wider">Gudivada, AP &bull; Blessing Certificate</div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[10px] font-bold text-terracotta-700 bg-terracotta-100 px-2.5 py-1 rounded-full uppercase" id="card-badge-occasion">
+                            Birthday Blessing
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Heartwarming Blessing Core -->
+                <div class="py-5 text-center space-y-3">
+                    <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold">With Endless Prayers For</p>
+                    
+                    <h4 class="text-2xl sm:text-3xl font-extrabold font-display text-terracotta-700" id="card-donor-name">
+                        Ramesh Varma & Family
+                    </h4>
+
+                    <!-- Bilingual Blessing Quote (Telugu & English) -->
+                    <div class="p-3 bg-white/90 rounded-xl border border-warm-200 shadow-sm max-w-md mx-auto">
+                        <div class="telugu-text text-sm sm:text-base font-bold text-gray-800">
+                            "మీకు మరియు మీ కుటుంబ సభ్యులకు ఆయురారోగ్యాలు, సంతోషాలు కలగాలని మమత వృద్ధాశ్రమ అమ్మలందరి హృదయపూర్వక ఆశీస్సులు!"
+                        </div>
+                        <div class="text-[11px] text-gray-600 italic mt-1.5" id="card-personalized-msg">
+                            "May your special day be illuminated with boundless joy, good health, and peace. Thank you for filling our plates and our hearts today."
+                        </div>
+                    </div>
+
+                    <!-- Details Row -->
+                    <div class="pt-1 flex items-center justify-center gap-6 text-xs text-gray-600">
+                        <div>
+                            <span class="block text-[10px] text-gray-400 uppercase font-semibold">Occasion Date</span>
+                            <span class="font-bold text-gray-800" id="card-date-display">Today</span>
+                        </div>
+                        <div class="w-px h-6 bg-warm-300"></div>
+                        <div>
+                            <span class="block text-[10px] text-gray-400 uppercase font-semibold">Dedicated Cause</span>
+                            <span class="font-bold text-gray-800" id="card-tier-display">Festive Andhra Meal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Footer Stamp -->
+                <div class="border-t border-warm-300/80 pt-3 flex items-center justify-between text-[11px] text-gray-500">
+                    <div class="flex items-center gap-1.5 text-peace-700 font-semibold">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Verified Community Donor
+                    </div>
+                    <div class="font-bold text-terracotta-600">
+                        #BlessingsFromGudivada
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons: WhatsApp Share & Canvas Download -->
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <button onclick="shareOnWhatsApp()" class="flex-1 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Share on WhatsApp Status</span>
+                </button>
+                <button onclick="downloadBlessingCard()" class="flex-1 py-3 rounded-full bg-warm-200 hover:bg-warm-300 text-gray-800 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Download Image Card</span>
+                </button>
+            </div>
+
+            <p class="text-[11px] text-gray-400 text-center mt-3">
+                Our volunteers will reach out to you on WhatsApp with real photos of food serving on your chosen date.
+            </p>
+        </div>
+    </div>
+
+    <!-- 3. Add Custom Resident Photo Modal (For Grandma Pics) -->
+    <div id="upload-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-warm-300 relative">
+            <button onclick="closeModal('upload-modal')" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-warm-100 text-gray-500 hover:text-gray-800 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="text-xl font-bold font-display text-gray-900 mb-1">Add a Grandma's Story</h3>
+            <p class="text-xs text-gray-500 mb-4">Upload or paste an Amma's photo from your Gudivada old age home visit.</p>
+
+            <form onsubmit="handleResidentAdd(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Amma's Name *</label>
+                    <input type="text" id="new-resident-name" required placeholder="e.g. Subbamma Garu" class="w-full px-3 py-2 rounded-xl border border-warm-300 text-sm outline-none">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Age *</label>
+                        <input type="number" id="new-resident-age" required placeholder="e.g. 78" class="w-full px-3 py-2 rounded-xl border border-warm-300 text-sm outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Favorite Passion</label>
+                        <input type="text" id="new-resident-hobby" placeholder="e.g. Bhajans / Tulasi Puja" class="w-full px-3 py-2 rounded-xl border border-warm-300 text-sm outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Gentle Words / Quote</label>
+                    <input type="text" id="new-resident-quote" placeholder="e.g. 'I feel blessed when children visit us.'" class="w-full px-3 py-2 rounded-xl border border-warm-300 text-sm outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Upload Photo (from your device)</label>
+                    <input type="file" id="new-resident-file" accept="image/*" onchange="previewUploadImage(event)" class="w-full text-xs text-gray-600 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-warm-200 file:text-terracotta-700 hover:file:bg-warm-300">
+                    <div id="upload-preview-container" class="mt-2 hidden">
+                        <img id="upload-preview-img" src="" alt="Amma Preview" class="w-20 h-20 object-cover rounded-xl border border-warm-300">
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-2.5 rounded-full bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold text-sm shadow transition">
+                        Add to Gallery
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hidden Canvas For Generating WhatsApp Image Download -->
+    <canvas id="blessing-canvas" width="800" height="600" class="hidden"></canvas>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Set Current Year in Footer
+        document.getElementById('current-year').innerText = new Date().getFullYear();
+
+        // Default Residents (Ammas of Gudivada Mamatha Home)
+        const defaultResidents = [
+            {
+                id: 1,
+                name: "Kamalamma Garu",
+                age: 82,
+                origin: "Gudivada Local",
+                hobby: "Devotional Songs & Annamacharya Kirtanalu",
+                quote: "A single kind word from a visitor lights up my whole week.",
+                image: "amma1.jpeg"
+            },
+            {
+                id: 2,
+                name: "Saraswathi Amma",
+                age: 76,
+                origin: "Krishna District",
+                hobby: "Knitting Warm Shawls & Gardening",
+                quote: "I pray every morning for the young generation's bright future.",
+                image: "amma2.jpeg"
+            },
+            {
+                id: 3,
+                name: "Parvathamma Garu",
+                age: 79,
+                origin: "Pedana / Gudivada",
+                hobby: "Storytelling from the Puranas",
+                quote: "Mamatha home gave me the sisters and daughters I always wished for.",
+                image: "amma3.jpeg"
+            },
+            {
+                id: 4,
+                name: "Lakshmi Kanthamma",
+                age: 85,
+                origin: "Gudivada",
+                hobby: "Tulasi Plant Care & Sathsang",
+                quote: "May god bless everyone who sponsors a meal for elderly mothers.",
+                image: "amma4.jpeg"
+            }
+        ];
+
+        let residentList = [...defaultResidents];
+        let pendingDonation = null;
+        let uploadedImageBase64 = null;
+
+        // Render Residents Cards
+        function renderResidents() {
+            const grid = document.getElementById('residents-grid');
+            grid.innerHTML = '';
+
+            residentList.forEach(resident => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl overflow-hidden border border-warm-200 shadow-sm hover:shadow-md transition-all flex flex-col group";
+                card.innerHTML = `
+                    <div class="h-56 relative overflow-hidden bg-warm-100">
+                        <img src="${resident.image}" alt="${resident.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x400/F2E8D5/8C5D30?text=${encodeURIComponent(resident.name)}'">
+                        <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-terracotta-700 text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                            Age: ${resident.age} yrs
+                        </div>
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-base">${resident.name}</h3>
+                            <div class="text-xs text-peace-600 font-medium mb-2"><i class="fa-solid fa-heart text-[10px] mr-1 text-terracotta-500"></i> ${resident.hobby}</div>
+                            <p class="text-xs text-gray-600 italic bg-warm-50 p-2.5 rounded-xl border border-warm-100">
+                                "${resident.quote}"
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-warm-100 flex items-center justify-between">
+                            <span class="text-[11px] text-gray-400"><i class="fa-solid fa-location-dot text-gray-400 mr-1"></i> Gudivada</span>
+                            <button onclick="prefillDedication('${resident.name}')" class="text-xs text-terracotta-600 hover:text-terracotta-700 font-bold">
+                                Sponsor for Her &rarr;
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Prefill donor form when user clicks "Sponsor for Her"
+        function prefillDedication(name) {
+            const msgInput = document.getElementById('donor-message');
+            msgInput.value = `Dedicated with reverence for ${name} & all Ammas at Mamatha Home.`;
+            document.getElementById('sponsor-meal').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when links are clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Set Today's date as default in celebration form
+        const todayStr = new Date().toISOString().split('T')[0];
+        document.getElementById('donation-date').value = todayStr;
+
+        // Occasion Selection
+        function updateOccasionUI() {
+            // Triggered on occasion change
+        }
+
+        // Tier Selection Handling
+        function selectTier(cardElement, amount, isCustom = false) {
+            const radio = cardElement.querySelector('input[type="radio"]');
+            radio.checked = true;
+
+            const summaryEl = document.getElementById('summary-amount');
+            if (isCustom) {
+                const customInput = document.getElementById('custom-amount-input');
+                customInput.focus();
+                const val = parseInt(customInput.value) || 1000;
+                summaryEl.innerText = '₹' + val.toLocaleString('en-IN');
+            } else {
+                summaryEl.innerText = '₹' + amount.toLocaleString('en-IN');
+            }
+        }
+
+        // Custom amount input listener
+        const customInput = document.getElementById('custom-amount-input');
+        customInput.addEventListener('input', (e) => {
+            const parentTier = customInput.closest('.border-2');
+            const radio = parentTier.querySelector('input[type="radio"]');
+            radio.checked = true;
+            const val = parseInt(e.target.value) || 0;
+            document.getElementById('summary-amount').innerText = '₹' + val.toLocaleString('en-IN');
+        });
+
+        // Form Submit -> Opens UPI Payment Modal
+        function handleOccasionSubmit(e) {
+            e.preventDefault();
+
+            const occasion = document.querySelector('input[name="occasion"]:checked').value;
+            const tierRadio = document.querySelector('input[name="tier"]:checked');
+            let tierName = tierRadio.value;
+            let amount = 3500;
+
+            if (tierRadio.dataset.amount === 'custom') {
+                amount = parseInt(document.getElementById('custom-amount-input').value) || 1000;
+                tierName = `Custom Contribution (Medicines & Care)`;
+            } else {
+                amount = parseInt(tierRadio.dataset.amount);
+            }
+
+            const donorName = document.getElementById('donor-name').value.trim();
+            const date = document.getElementById('donation-date').value;
+            const phone = document.getElementById('donor-phone').value.trim();
+            const message = document.getElementById('donor-message').value.trim() || 'Praying for everyone at Mamatha Home.';
+
+            pendingDonation = {
+                donorName,
+                occasion,
+                tierName,
+                amount,
+                date,
+                phone,
+                message
+            };
+
+            // Update Payment Modal
+            document.getElementById('modal-pay-amount').innerText = '₹' + amount.toLocaleString('en-IN');
+            document.getElementById('modal-pay-tier-name').innerText = `${occasion} - ${tierName}`;
+            document.getElementById('payment-modal-subtitle').innerText = `Dedication by ${donorName}`;
+
+            openModal('payment-modal');
+        }
+
+        // Simulate Successful Payment Verification
+        function simulatePaymentSuccess() {
+            closeModal('payment-modal');
+
+            // Fire Celebration Confetti
+            try {
+                confetti({
+                    particleCount: 80,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            } catch (err) {
+                // confetti fallback
+            }
+
+            // Populate Heartfelt WhatsApp Blessing Card
+            document.getElementById('card-badge-occasion').innerText = `${pendingDonation.occasion} Blessing`;
+            document.getElementById('card-donor-name').innerText = pendingDonation.donorName;
+            document.getElementById('card-date-display').innerText = new Date(pendingDonation.date).toLocaleDateString('en-IN', {
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+            });
+            document.getElementById('card-tier-display').innerText = pendingDonation.tierName;
+            
+            // Dynamic occasion greeting
+            const customNote = pendingDonation.message 
+                ? `"${pendingDonation.message}"` 
+                : `"May your life be illuminated with endless peace, health and fulfillment."`;
+            document.getElementById('card-personalized-msg').innerText = customNote;
+
+            openModal('card-modal');
+        }
+
+        // Share Card via WhatsApp Pre-filled message
+        function shareOnWhatsApp() {
+            if (!pendingDonation) return;
+
+            const text = `🌸 *Heartfelt Blessings from Mamatha Old Age Home, Gudivada* 🌸%0A%0A` +
+                         `Namaste! On the auspicious occasion of *${pendingDonation.occasion}*, ` +
+                         `*${pendingDonation.donorName}* has graciously sponsored: *${pendingDonation.tierName}* for the elderly grandmothers at Mamatha Home, Gudivada.%0A%0A` +
+                         `_మీకు మరియు మీ కుటుంబ సభ్యులకు ఆయురారోగ్యాలు కలగాలని కోరుకుంటున్నాము._ 👵🙏%0A%0A` +
+                         `Support our grandmas in Gudivada: https://mamathaoldagehome.org`;
+
+            const waUrl = `https://api.whatsapp.com/send?text=${text}`;
+            window.open(waUrl, '_blank');
+        }
+
+        // Downloadable Card on HTML5 Canvas
+        function downloadBlessingCard() {
+            const canvas = document.getElementById('blessing-canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Background Gradient
+            const gradient = ctx.createLinearGradient(0, 0, 800, 600);
+            gradient.addColorStop(0, '#FDFBF7');
+            gradient.addColorStop(0.5, '#F9F5EC');
+            gradient.addColorStop(1, '#F7E7CE');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 800, 600);
+
+            // Outer Border
+            ctx.lineWidth = 14;
+            ctx.strokeStyle = '#D95C3C';
+            ctx.strokeRect(15, 15, 770, 570);
+
+            // Inner Fine Border
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = '#F59E0B';
+            ctx.strokeRect(28, 28, 744, 544);
+
+            // Home Header
+            ctx.textAlign = 'center';
+            ctx.font = 'bold 30px "Outfit", sans-serif';
+            ctx.fillStyle = '#C24727';
+            ctx.fillText('MAMATHA OLD AGE HOME', 400, 85);
+
+            ctx.font = '600 15px "Plus Jakarta Sans", sans-serif';
+            ctx.fillStyle = '#165242';
+            ctx.fillText('Gudivada, Krishna District, Andhra Pradesh • Certificate of Blessing', 400, 115);
+
+            // Divider Line
+            ctx.beginPath();
+            ctx.moveTo(150, 135);
+            ctx.lineTo(650, 135);
+            ctx.strokeStyle = '#E7D5B6';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Occasion Tag
+            ctx.font = 'bold 16px "Plus Jakarta Sans", sans-serif';
+            ctx.fillStyle = '#78350F';
+            ctx.fillText(`OCCASION: ${pendingDonation ? pendingDonation.occasion.toUpperCase() : 'CELEBRATION'}`, 400, 175);
+
+            // Subtitle
+            ctx.font = '16px "Plus Jakarta Sans", sans-serif';
+            ctx.fillStyle = '#6B7280';
+            ctx.fillText('This certificate of gratitude and warmest prayers is dedicated to:', 400, 220);
+
+            // Donor Name
+            ctx.font = 'bold 36px "Outfit", sans-serif';
+            ctx.fillStyle = '#111827';
+            ctx.fillText(pendingDonation ? pendingDonation.donorName : 'Valued Supporter', 400, 275);
+
+            // Telugu Blessing Text
+            ctx.font = 'bold 20px "Plus Jakarta Sans", sans-serif';
+            ctx.fillStyle = '#0E3B2F';
+            ctx.fillText('"మీకు మరియు మీ కుటుంబ సభ్యులకు ఆయురారోగ్యాలు కలగాలని కోరుకుంటున్నాము"', 400, 340);
+
+            // English Blessing Text
+            ctx.font = 'italic 16px "Plus Jakarta Sans", sans-serif';
+            ctx.fillStyle = '#4B5563';
+            ctx.fillText('The elderly mothers of Mamatha Home bestow their unconditional love and blessings.', 400, 375);
+
+            // Sponsorship Summary Box
+            ctx.fillStyle = '#FFFFFF';
+            ctx.strokeStyle = '#E2D5BE';
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.roundRect(120, 420, 560, 65, [12]);
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.font = '14px "Plus Jakarta Sans", sans-serif';
+            ctx.fillStyle = '#374151';
+            const tierText = pendingDonation ? pendingDonation.tierName : "Special Meal Contribution";
+            const dateStr = pendingDonation ? pendingDonation.date : todayStr;
+            ctx.fillText(`Dedicated Service: ${tierText}`, 400, 448);
+            ctx.fillText(`Date: ${dateStr}  •  Gudivada Care Center`, 400, 470);
+
+            // Footer Signature / Stamp
+            ctx.font = 'bold 14px "Plus Jakarta Sans", sans-serif';
+            ctx.fillStyle = '#D95C3C';
+            ctx.fillText('Mamatha Old Age Home Community Initiative', 400, 535);
+
+            // Create Download Link
+            const imageUri = canvas.toDataURL("image/png");
+            const downloadLink = document.createElement('a');
+            downloadLink.download = `Mamatha_Home_Blessings_${pendingDonation ? pendingDonation.donorName.replace(/\\s+/g, '_') : 'Occasion'}.png`;
+            downloadLink.href = imageUri;
+            downloadLink.click();
+        }
+
+        // Copy UPI handler
+        function copyUpi() {
+            const dummy = document.createElement("input");
+            document.body.appendChild(dummy);
+            dummy.value = "mamatha.gudivada@sbi";
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            // Visual feedback
+            const toast = document.createElement("div");
+            toast.className = "fixed bottom-5 right-5 bg-gray-900 text-white text-xs px-4 py-2.5 rounded-xl shadow-lg z-50 animate-bounce";
+            toast.innerText = "UPI ID copied to clipboard!";
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        }
+
+        // Quick Pledge for Grocery Items
+        function pledgeItem(itemName) {
+            const waUrl = `https://wa.me/919876543210?text=Namaste%20Mamatha%20Old%20Age%20Home%20Gudivada,%20I%20would%20like%20to%20pledge%20and%20drop%20off:%20${encodeURIComponent(itemName)}.`;
+            window.open(waUrl, '_blank');
+        }
+
+        // Upload Grandma Photos modal
+        function openUploadModal() {
+            openModal('upload-modal');
+        }
+
+        function previewUploadImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    uploadedImageBase64 = e.target.result;
+                    const previewImg = document.getElementById('upload-preview-img');
+                    previewImg.src = uploadedImageBase64;
+                    document.getElementById('upload-preview-container').classList.remove('hidden');
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function handleResidentAdd(e) {
+            e.preventDefault();
+            const name = document.getElementById('new-resident-name').value.trim();
+            const age = document.getElementById('new-resident-age').value.trim();
+            const hobby = document.getElementById('new-resident-hobby').value.trim() || 'Sharing affection';
+            const quote = document.getElementById('new-resident-quote').value.trim() || 'Always grateful for the love shown to us.';
+            const image = uploadedImageBase64 || `https://placehold.co/400x400/E8D5B6/543015?text=${encodeURIComponent(name)}`;
+
+            residentList.unshift({
+                id: Date.now(),
+                name,
+                age,
+                origin: "Gudivada",
+                hobby,
+                quote,
+                image
+            });
+
+            renderResidents();
+            closeModal('upload-modal');
+            e.target.reset();
+            document.getElementById('upload-preview-container').classList.add('hidden');
+            uploadedImageBase64 = null;
+
+            // Scroll to gallery
+            document.getElementById('residents').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Modal Utility Functions
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Initialize App on Window Load
+        window.onload = function() {
+            renderResidents();
+        };
+    </script>
+</body>
+</html>
